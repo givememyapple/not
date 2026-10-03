@@ -19,7 +19,7 @@ def start_message(message):
 
 Забирай свой безлимитный доступ по самой честной цене 👇🏻"""
 
-    bot.send_message(message.chat.id, text, parse_mode='MarkdownV2', reply_markup=markup)
+    bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=markup)
 
 
 bot.infinity_polling()
