@@ -7,8 +7,9 @@ bot = telebot.TeleBot("8766977724:AAHQ-iXx2ACvlPdYIrkraK80AfysxWqQ1zw")
 def start_message(message):
     markup = types.InlineKeyboardMarkup()
     button = types.InlineKeyboardButton(text="РосВПН", url="https://t.me/FemboyVpnrobot")
-
     markup.add(button)
+
+    # Используем обычный текст, для жирного шрифта можно использовать <b>текст</b>
     text = """Мы переехали! 🔥
 
 Мы обновились! Теперь наш VPN полностью защищен от любых глушилок, блокировок и ТСПУ. Картинки грузятся, видео не зависают, сайты «летают».
@@ -19,7 +20,7 @@ def start_message(message):
 
 Забирай свой безлимитный доступ по самой честной цене 👇🏻"""
 
+    # Изменили parse_mode на HTML
     bot.send_message(message.chat.id, text, parse_mode='HTML', reply_markup=markup)
-
 
 bot.infinity_polling()
